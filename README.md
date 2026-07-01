@@ -46,9 +46,4 @@ Arepas Tech/
 ✅ Elementos de cultura colombiana  
 ✅ Navegación intuitiva  
 ✅ Animaciones sutiles y profesionales  
-✅ Código limpio y mantenible  
-
----
-
-**Desarrollado con IA Asistente - Cascade**  
-**Fecha**: Julio 2026
+✅ Código limpio 
