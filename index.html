@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arepas Tech - Arepas Artesanales Colombianas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header con líneas de la bandera de Colombia -->
+    <header>
+        <div class="colombian-flag">
+            <div class="flag-yellow"></div>
+            <div class="flag-blue"></div>
+            <div class="flag-red"></div>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <h1>Arepas Tech</h1>
+                </div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#menu" class="nav-link">Menú</a></li>
+                    <li><a href="#como-pedir" class="nav-link">Cómo Pedir</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Arepas Con Sabor Colombiano</h1>
+            <p>Deliciosas arepas artesanales con la tradición y sabor de Colombia</p>
+            <a href="#menu" class="cta-button">Ver Menú</a>
+        </div>
+        <div class="hero-image">
+            <div class="arepa-placeholder">
+                <span>🫓</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menú del Día -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2>Menú del Día</h2>
+            <p class="section-subtitle">Descubre nuestras arepas artesanales de diferentes regiones de Colombia</p>
+            
+            <div class="menu-grid">
+                <!-- Arepa Paisa -->
+                <div class="menu-card">
+                    <div class="card-icon">🫓</div>
+                    <h3>Arepa Paisa</h3>
+                    <p class="region">Antioquia / Eje Cafetero</p>
+                    <p class="description">Maíz blanco limpio, delgada y plana. Sabor neutro, asada al carbón. Se sirve con mantequilla y queso por encima.</p>
+                    <p class="price">$2.500 - $4.500</p>
+                    <button class="whatsapp-btn" onclick="pedirPorWhatsApp('Arepa Paisa')">
+                        <span>📱</span> Pedir por WhatsApp
+                    </button>
+                </div>
+
+                <!-- Arepa de Choclo -->
+                <div class="menu-card">
+                    <div class="card-icon">🌽</div>
+                    <h3>Arepa de Choclo</h3>
+                    <p class="region">Valle del Cauca / Antioquia</p>
+                    <p class="description">Maíz tierno dulce molido fresco. Textura suave, dorada, doblada a la mitad con queso de capa o cuajada.</p>
+                    <p class="price">$5.000 - $9.000</p>
+                    <button class="whatsapp-btn" onclick="pedirPorWhatsApp('Arepa de Choclo')">
+                        <span>📱</span> Pedir por WhatsApp
+                    </button>
+                </div>
+
+                <!-- Arepa Boyacense -->
+                <div class="menu-card">
+                    <div class="card-icon">🫓</div>
+                    <h3>Arepa Boyacense</h3>
+                    <p class="region">Boyacá</p>
+                    <p class="description">Maíz amarillo grueso, un poco dulce. La masa se mezcla con cuajada campesina y se asa tradicionalmente en laja de piedra.</p>
+                    <p class="price">$3.500 - $6.000</p>
+                    <button class="whatsapp-btn" onclick="pedirPorWhatsApp('Arepa Boyacense')">
+                        <span>📱</span> Pedir por WhatsApp
+                    </button>
+                </div>
+
+                <!-- Arepa de Huevo -->
+                <div class="menu-card">
+                    <div class="card-icon">🥚</div>
+                    <h3>Arepa de Huevo</h3>
+                    <p class="region">Costa Caribe</p>
+                    <p class="description">Masa de maíz amarillo, frita. Se abre a mitad de cocción para meter un huevo crudo entero (y carne) y se vuelve a freír.</p>
+                    <p class="price">$4.000 - $7.000</p>
+                    <button class="whatsapp-btn" onclick="pedirPorWhatsApp('Arepa de Huevo')">
+                        <span>📱</span> Pedir por WhatsApp
+                    </button>
+                </div>
+
+                <!-- Arepa Santandereana -->
+                <div class="menu-card">
+                    <div class="card-icon">🥓</div>
+                    <h3>Arepa Santandereana</h3>
+                    <p class="region">Santander</p>
+                    <p class="description">Maíz pelado cocido con ceniza. La masa se muele junto con chicharrón de cerdo crujiente y yuca cocida.</p>
+                    <p class="price">$4.000 - $7.000</p>
+                    <button class="whatsapp-btn" onclick="pedirPorWhatsApp('Arepa Santandereana')">
+                        <span>📱</span> Pedir por WhatsApp
+                    </button>
+                </div>
+
+                <!-- Arepa Ocañera -->
+                <div class="menu-card">
+                    <div class="card-icon">🫓</div>
+                    <h3>Arepa Ocañera</h3>
+                    <p class="region">Norte de Santander</p>
+                    <p class="description">Muy delgada y tostada. Al asarse se infla, permitiendo abrirla para rellenar con queso costeño, carne o mantequilla.</p>
+                    <p class="price">$4.500 - $8.000</p>
+                    <button class="whatsapp-btn" onclick="pedirPorWhatsApp('Arepa Ocañera')">
+                        <span>📱</span> Pedir por WhatsApp
+                    </button>
+                </div>
+
+                <!-- Arepa de Queso -->
+                <div class="menu-card">
+                    <div class="card-icon">🧀</div>
+                    <h3>Arepa de Queso</h3>
+                    <p class="region">Nacional</p>
+                    <p class="description">Masa tradicional con una alta proporción de queso mozzarella o costeño mezclado directamente antes de asar.</p>
+                    <p class="price">$6.000 - $12.000</p>
+                    <button class="whatsapp-btn" onclick="pedirPorWhatsApp('Arepa de Queso')">
+                        <span>📱</span> Pedir por WhatsApp
+                    </button>
+                </div>
+
+                <!-- Arepa de Arroz -->
+                <div class="menu-card">
+                    <div class="card-icon">🍚</div>
+                    <h3>Arepa de Arroz</h3>
+                    <p class="region">Llanos Orientales</p>
+                    <p class="description">Elaborada con arroz cocido, cuajada y un toque de manteca. Se asa envuelta en hojas de plátano.</p>
+                    <p class="price">$4.000 - $6.500</p>
+                    <button class="whatsapp-btn" onclick="pedirPorWhatsApp('Arepa de Arroz')">
+                        <span>📱</span> Pedir por WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo Pedir -->
+    <section id="como-pedir" class="how-to-order">
+        <div class="container">
+            <h2>Cómo Pedir</h2>
+            <p class="section-subtitle">Sigue estos sencillos pasos para disfrutar de nuestras arepas</p>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Ver Menú</h3>
+                        <p>Explora nuestra variedad de arepas artesanales de diferentes regiones de Colombia.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Elegir Arepas</h3>
+                        <p>Selecciona las arepas que deseas probar. Cada una tiene un sabor único.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Click en WhatsApp</h3>
+                        <p>Presiona el botón de WhatsApp en la arepa que deseas pedir.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Enviar Pedido</h3>
+                        <p>Confirma tu pedido por WhatsApp y recibe tus arepas en la puerta de tu casa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p class="section-subtitle">Estamos aquí para atenderte</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <h3>Teléfono</h3>
+                    <p>+571234567891</p>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <h3>Dirección</h3>
+                    <p>Calle 100 # 15 - 45</p>
+                    <p>Bogotá, Colombia</p>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">🕐</div>
+                    <h3>Horarios</h3>
+                    <p>Lunes a Domingo</p>
+                    <p>9:00 AM - 10:00 PM</p>
+                </div>
+            </div>
+            
+            <div class="whatsapp-large">
+                <a href="https://wa.me/571234567891?text=Hola,%20me%20gustaría%20hacer%20un%20pedido%20de%20arepas" target="_blank" class="whatsapp-large-btn">
+                    <span>📱</span> Pedir por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Arepas Tech</h3>
+                    <p>Sabor colombiano en cada bocado</p>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Arepas Tech. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp (solo móvil) -->
+    <a href="https://wa.me/571234567891?text=Hola,%20me%20gustaría%20hacer%20un%20pedido%20de%20arepas" target="_blank" class="whatsapp-float" id="whatsappFloat">
+        <span>💬</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
